@@ -10,68 +10,115 @@
   <!-- Bootstrap -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
-  h1 { text-align: center; }
-  img.icon { height: 32px; width: 32px; margin-right: 15px; }
-  .wrapper { padding: 15px;}
+      
+      
+      
+      h1 { text-align: center; }
+      img.icon { height: 32px; width: 32px; margin-right: 15px; }
+      .wrapper { 
+          padding: 15px;
+          margin: 10px;
+      } 
+      
+      * { box-sizing: border-box; }
+      #conteneur {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          width: 100vw;
+          padding: 0 10px;
+          margin: auto;          
+      }
+      div {
+          flex: 1 0 auto;
+          width: 30%;
+          display: block;
+      }
+            
   </style>
 </head>
 <body>
   <h1>URL RAIN</h1>
 
 
-  <div class="container">
-    <div class="row">
-
-      <div class="col-sm-4">
+  <div id="conteneur">
         <div class="wrapper well">
           <h3><a href="http://qrohlf.com/trianglify-generator/"><img src="http://qrohlf.com/trianglify-generator/images/header.png" class="icon">Trianglify</a></h3>
           <p>Generateur de background de type lowpoly</p>
         </div>
-      </div>
-
-      <div class="col-sm-4">
+      
         <div class="wrapper well">
           <h3><a href="http://cssreference.io/"><img src="http://cssreference.io/images/css-reference-icon.png" class="icon">CSS reference.io</a></h3>
           <p>cssreference.io is a free visual guide to CSS. It features the most popular properties, and explains them with illustrated and animated examples.</p>
         </div>
-      </div>
-
-      <div class="col-sm-4">
+      
         <div class="wrapper well">
           <h3><a href="http://fontawesome.io/icons/">Font awesome</a></h3>
           <p>Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.</p>
-        </div>
-      </div>
+        </div>      
       
-      <div class="col-sm-4">
         <div class="wrapper well">
           <h3><a href="https://github.com/dolce/awesome-jquery"><img src="https://raw.githubusercontent.com/peterkokot/awesome-jquery/master/awesome-jquery.png" class="icon">Jquery-plugin List</a></h3>
           <p>A curated list of awesome jQuery plugins, resources and other shiny things. Inspired by the awesome trend on GitHub.</p>
         </div>
-      </div>
-      
-      <div class="col-sm-4">
+            
         <div class="wrapper well">
           <h3><a href="https://zeplin.io/"><img src="https://zeplin.io/img/icZeplinGray.svg" class="icon">Zeplin</a></h3>
           <p>Zeplin is the ultimate collaboration tool between designers and developers. It cuts meetings in half and ensures that designs are implemented perfectly,
 however complex.</p>
         </div>
-      </div>
-        
-      <div class="col-sm-4">
+              
         <div class="wrapper well">
           <h3><a href="http://devdocs.io/"><img src="https://cdn.devdocs.io/images/apple-icon-152.png" class="icon">DevDocs</a></h3>
           <p>DevDocs combines multiple API documentations in a fast, organized, and searchable interface.</p>
-        </div>
-      </div>
-        
-      <div class="col-sm-4">
+        </div>        
+      
         <div class="wrapper well">
           <h3><a href="https://github.com/Plou"><img src="https://github.com/apple-touch-icon-180x180.png" class="icon">Github Plou</a></h3>
+        </div>        
+      
+        <div class="wrapper well">
+          <h3><a href="http://blog.goetter.fr/"><img src="https://secure.gravatar.com/blavatar/1e7460fd6e421658c23fc704104a2883?s=32" class="icon">Goetter -- Livre Flexbox</a></h3>
+          <p>Blogger</p>
+        </div>        
+      
+        <div class="wrapper well">
+          <h3><a href="http://la-cascade.io"><img src="https://la-cascade.io/content/images/2015/03/optimised.svg" class="icon">La cascade</a></h3>
+          <p>Un peu de tout sur CSS, HTML, SVG, JavaScript et le reste</p>
         </div>
-      </div>
-
-    </div>
+              
+        <div class="wrapper well">
+          <h3><a href="https://css-tricks.com/"><img src="https://cdn.css-tricks.com/apple-touch-icon.png" class="icon">Css Tricks</a></h3>
+          <p>Differents tutos et tricks en css</p>
+        </div>
+        
+        <div class="wrapper well">
+            <p>Trucs sur Flexbox</p>
+            <h3><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">FlexBox Complete guide</a></h3>
+            <h3><a href="http://prettyminimal.com/flexbox/">FlexBox Visual Guide</a></h3>
+            <h3><a href="http://flexbox.help/">FlexBox Tests</a></h3>
+        </div>
   </div>
+    
+    <script>
+        
+        
+        var conteneur = document.getElementById('conteneur');
+        function maxHeight () {
+            
+            conteneur.style.height = "auto";
+            var height = ( conteneur.offsetHeight ) + 100;
+            height += conteneur.childElementCount * 20;
+            height = height / 3;
+            conteneur.style.height = height + "px";
+        }  
+        window.onresize = function( e ) {
+            maxHeight()
+        }
+        (maxHeight())
+        
+    
+    </script>
 </body>
 </html>
