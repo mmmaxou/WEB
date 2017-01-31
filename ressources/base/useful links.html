@@ -26,8 +26,8 @@
           flex-direction: column;
           flex-wrap: wrap;
           align-items: flex-start;
-          width: 100vw;
-          padding: 0 10px;
+          width: 100%;
+          padding: 0;
           margin: auto;          
       }
       div {
@@ -119,6 +119,16 @@ however complex.</p>
           <h3><a href="http://www.pandajs.net/"><img src="http://www.pandajs.net/favicon.png" class="icon">Panda.js</a></h3>
           <p>Free HTML5 game engine | For mobile and desktop games</p>
         </div>
+      
+        <div class="wrapper well">
+          <h3><a href="http://alvarotrigo.com/fullPage/"><img src="http://alvarotrigo.com/fullPage/favicons/apple-touch-icon.png" class="icon">FullPage.js</a></h3>
+          <p>Create Beautiful Fullscreen Scrolling Websites</p>
+        </div>
+      
+        <div class="wrapper well">
+          <h3><a href="http://scrollmagic.io/"><img src="http://scrollmagic.io/img/favicon.ico" class="icon">MagicScroll</a></h3>
+          <p>Create Beautiful Fullscreen Scrolling Websites</p>
+        </div>
   </div>
     
     <script>
@@ -128,9 +138,10 @@ however complex.</p>
         function maxHeight () {
             
             conteneur.style.height = "auto";
-            var height = ( conteneur.offsetHeight ) + 100;
+            var height = ( conteneur.offsetHeight );
             height += conteneur.childElementCount * 20;
             height = height / 3;
+            height += 100;
             conteneur.style.height = height + "px";
         }  
         window.onresize = function( e ) {
